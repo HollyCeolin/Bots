@@ -1,12 +1,22 @@
-// const {shuffleArray} = require('./utils')
+const {shuffleArray} = require('./utils')
 
-// describe('shuffleArray should', () => {
-    
-//     test('Title shows up when page loads', async () => {
-//         const title = await driver.findElement(By.id('title'))
-//         const displayed = await title.isDisplayed()
-//         expect(displayed).toBe(true)
-// })
+describe('shuffleArray should', () => {
+    expect(shuffleArray).toEqual([
+        { events: expect.any(Array), conversationState: 'ENDED' },
+        false,
+        undefined,
+      ]);
+      expect(shuffleArray[0].events).toHaveLength(9);
+
+      expect(shuffleArray).toEqual(         
+  expect.arrayContaining([      
+    expect.objectContaining({   
+      type: 'END'              
+    })
+  ])
+)
+   
+})
 
 /*check that shuffleArray returns an array
 
